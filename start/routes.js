@@ -16,4 +16,26 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/').render('welcome')
+
+// This will be the api routes
+Route.group(() => {
+  // Route.resource('users', 'UserController');
+
+}).prefix('api');
+
+// This could be use as user profile
+Route.group(() => {
+  Route.get('/', ({ subdomains }) => {
+    return `The username is ${subdomains.user}`
+  })
+}).domain(':user.myapp.com')
+
+Route.post('login', 'UserController.login').middleware('guest');
+
+Route.get('users/:id', 'UserController.show').middleware('auth');
+
+Route.get('hello-world', ({ view }) => {
+  return view.render('hello-world')
+});
+
+Route.on('/').render('welcome');

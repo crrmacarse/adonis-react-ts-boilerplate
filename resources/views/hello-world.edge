@@ -1,0 +1,7 @@
+<h1>Hello World!</h1>
+
+@loggedIn
+  <h2> Hello {{ auth.user.username }} </h2>
+@else
+  <p> Please login </p>
+@endloggedIn
