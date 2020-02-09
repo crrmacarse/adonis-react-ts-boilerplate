@@ -34,5 +34,7 @@ jobs:
       run: npm run test-frontend
     # - name: test backend // github doesn't support server side functions
     #   run: npm run test
+    - name: build ssr
+      run: npm run ssr
     - name: build
       run: npm run prod

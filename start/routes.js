@@ -23,4 +23,4 @@ Route.group(() => {
 Route.get('/adonis', ({ view }) => view.render('welcome'));
 
 // This is where the react will take over
-Route.any('*', ({ view }) => view.render('index'));
+Route.any('*', 'ReactViewController.show');

@@ -2,8 +2,9 @@
 <html lang="en">
 @include('partials/header')
 <body>
-  <div id="root"></div>
+  <div id="root">{{{ content }}}</div>
   <div id="portal-root"></div>
 </body>
-{{ script('/dist/bundle') }}
+@include('partials/reduxStore')
+{{ script('dist/bundle') }}
 </html>
