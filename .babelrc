@@ -1,0 +1,15 @@
+{
+  "presets": [
+      [
+          "@babel/preset-env",
+          {
+              "targets": {
+                  "esmodules": true
+              },
+              "useBuiltIns": "entry",
+              "corejs": "core-js@2"
+          }
+      ],
+      "@babel/preset-react",
+  ]
+}

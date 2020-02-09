@@ -1,31 +1,86 @@
-# Adonis fullstack application
+# Adonis + React-TS boilerplate
+
+Read the [documentation](https://twitter.com/pablongbuhaymo) to get a full insight about this framework.
+
+## Overview
 
 This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+- Bodyparser
+- Session
+- Authentication
+- Web security middleware
+- CORS
+- Edge template engine
+- Lucid ORM
+- Migrations and seeds
+
+It also includes a pre-configured Webpack that caters specifically for React-TS
 
 ## Setup
 
-Use the adonis command to install the blueprint
-
 ```bash
-adonis new yardstick
+npm install -g @adonisjs/cli
+npm install
+adonis key:generate
 ```
 
-or manually clone the repo and then run `npm install`.
+### Starting the application
 
+```bash
+npm run hot
+adonis serve --dev -i resources,compiler,public
+```
+
+Optional
+
+Run frontend test watch:
+
+```bash
+npm run test-frontend:watch
+```
 
 ### Migrations
 
-Run the following command to run startup migrations.
-
-```js
+```bash
 adonis migration:run
 ```
+
+### Testing the application
+
+Frontend:
+
+```bash
+npm run test-frontend
+```
+
+Backend:
+
+```bash
+npm run test
+```
+
+### Others
+
+Run lint:
+
+```bash
+npm run lint
+```
+
+Run bundle analyzer:
+
+```bash
+npm run build:stats
+npm run analyze
+```
+
+### Building for Production
+
+```bash
+npm run prod
+```
+
+---
+
+Follow me at twitter: [🐔](https://twitter.com/pablongbuhaymo)

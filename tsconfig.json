@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": "resources/react/",
+    "outDir": "public",
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "lib": ["dom","esnext"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strictNullChecks": false,
+  },
+  "include": ["resources/react/", "index.d.ts"],
+  "exclude": ["node_modules", "public"],
+}

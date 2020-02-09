@@ -1,9 +1,12 @@
 # Node modules
 node_modules
-package-lock.json
 
 # Adonis directory for storing tmp files
 tmp
+
+# Build
+/public/dist/*
+/public/ssr/*
 
 # Environment variables, never commit this file
 .env
@@ -11,6 +14,34 @@ tmp
 # The development sqlite file
 database/*.sqlite
 
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
 # VSCode & Webstorm history directories
-.history
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
 .idea
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
