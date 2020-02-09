@@ -1,5 +1,3 @@
-'use strict'
-
 /*
 |--------------------------------------------------------------------------
 | Routes
@@ -14,7 +12,8 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+// eslint-disable-next-line no-undef
+const Route = use('Route');
 
 
 // This will be the api routes
@@ -25,17 +24,13 @@ Route.group(() => {
 
 // This could be use as user profile
 Route.group(() => {
-  Route.get('/', ({ subdomains }) => {
-    return `The username is ${subdomains.user}`
-  })
-}).domain(':user.myapp.com')
+  Route.get('/', ({ subdomains }) => `The username is ${subdomains.user}`);
+}).domain(':user.myapp.com');
 
 Route.post('login', 'UserController.login').middleware('guest');
 
 Route.get('users/:id', 'UserController.show').middleware('auth');
 
-Route.get('hello-world', ({ view }) => {
-  return view.render('hello-world')
-});
+Route.get('/adonis', ({ view }) => view.render('welcome'));
 
-Route.on('/').render('welcome');
+Route.any('*', ({ view }) => view.render('index'));

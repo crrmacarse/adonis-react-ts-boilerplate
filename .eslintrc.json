@@ -27,12 +27,12 @@
     "import/resolver": {
       "node": {
         "extensions": [".js", ".ts", ".tsx"],
-        "paths": ["src"]
+        "paths": ["resources/react/"]
       }
     }
   },
   "rules": {
-      "no-console": [1, { "allow": ["warn"] }],
+      "no-console": [1, { "allow": ["warn", "error"] }],
       "linebreak-style": 0,
       "import/no-extraneous-dependencies": [2, { "devDependencies": true }],
       "react/jsx-filename-extension": [2, { "extensions": [".js", ".ts", ".tsx"] }],

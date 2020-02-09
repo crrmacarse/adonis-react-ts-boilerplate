@@ -1,5 +1,8 @@
 import CompressionPlugin from 'compression-webpack-plugin';
 import BrotliPlugin from 'brotli-webpack-plugin';
+import {
+  entry, output, moduleResolver, rules, plugins,
+} from './common';
 
 export default {
   mode: 'production',
@@ -12,7 +15,7 @@ export default {
       ...rules,
       {
         test: /\.(scss|css)$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: ['css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
   },
@@ -25,5 +28,5 @@ export default {
       threshold: 10240,
       minRatio: 0.8,
     }),
-  ]
+  ],
 };
