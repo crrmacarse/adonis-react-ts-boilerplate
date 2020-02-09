@@ -15,22 +15,13 @@
 // eslint-disable-next-line no-undef
 const Route = use('Route');
 
-
-// This will be the api routes
 Route.group(() => {
-  // Route.resource('users', 'UserController');
+  // This will be the api routes
 
+  Route.post('login', 'UserController.login').middleware('guest');
 }).prefix('api');
-
-// This could be use as user profile
-Route.group(() => {
-  Route.get('/', ({ subdomains }) => `The username is ${subdomains.user}`);
-}).domain(':user.myapp.com');
-
-Route.post('login', 'UserController.login').middleware('guest');
-
-Route.get('users/:id', 'UserController.show').middleware('auth');
 
 Route.get('/adonis', ({ view }) => view.render('welcome'));
 
+// This is where the react will take over
 Route.any('*', ({ view }) => view.render('index'));
