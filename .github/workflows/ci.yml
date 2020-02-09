@@ -22,13 +22,17 @@ jobs:
         node-version: ${{ matrix.node }}
         registry-url: https://registry.npmjs.org
 
+    # - name: adonis cli
+    #   run: npm install -g @adonisjs/cli
     - name: install
       run: npm install
+    # - name: generate key
+    #   run: adonis key:generate
     - name: lint
       run: npm run lint
     - name: test frontend
-      run: npm test:frontend
-    - name: test backend
-      run: npm test
+      run: npm run test-frontend
+    # - name: test backend // github doesn't support server side functions
+    #   run: npm run test
     - name: build
       run: npm run prod

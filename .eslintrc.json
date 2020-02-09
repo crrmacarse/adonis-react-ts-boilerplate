@@ -32,6 +32,18 @@
       }
     }
   },
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.js",
+        "**/*.test.ts",
+        "**/*.test.tsx"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ],
   "rules": {
       "strict": "off",
       "class-methods-use-this": "off",
