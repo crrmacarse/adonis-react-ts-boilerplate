@@ -3,15 +3,13 @@ import {
   entry, output, moduleResolver, rules, plugins,
 } from './common';
 
-const PORT = process.env.PORT || 3333;
-
 const devServer = () => ({
   hot: true,
   contentBase: join(process.cwd(), '/public'),
   writeToDisk: true,
   historyApiFallback: true,
   compress: true,
-  port: PORT,
+  port: 4444,
   overlay: {
     errors: true,
     warnings: true,

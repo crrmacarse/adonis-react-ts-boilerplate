@@ -5,21 +5,20 @@ export const entry = join(process.cwd(), '/resources/react/index.tsx');
 
 export const output = {
   path: join(process.cwd(), '/public/dist'),
-  filename: '[name].[hash].bundle.js',
+  filename: 'bundle.js',
   chunkFilename: '[name].[hash].bundle.js',
   publicPath: '/dist/',
 };
 
-// @TODO: I could move assets to public
 export const moduleResolver = {
   modules: [
     'node_modules',
     resolve(__dirname, '..', 'resources/react/'),
   ],
   extensions: ['.ts', '.tsx', '.js'],
-  // alias: {
-  //   assets: resolve(__dirname, '..', 'resources/react/assets'),
-  // },
+  alias: {
+    assets: resolve(__dirname, '..', 'resources/assets/'),
+  },
 };
 
 export const rules = [
