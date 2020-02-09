@@ -10,7 +10,7 @@
     "prod": "webpack --profile --progress --config=webpack.config.babel.js --env=production",
     "build:stats": "webpack --profile --json --config=webpack.config.babel.js --env=production > compilation-stats.json",
     "analyze": "webpack-bundle-analyzer compilation-stats.json public",
-    "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern node_modules/",
+    "lint": "eslint --ext .js,.ts,.tsx,*.test.tsx . --ignore-pattern node_modules/ --ignore-pattern public/",
     "test:frontend": "jest --verbose --colors --coverage",
     "test:watch": "jest --colors --watch",
     "serve:frontend": "serve public",

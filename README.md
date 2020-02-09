@@ -1,5 +1,7 @@
 # Adonis + React-TS boilerplate
 
+![CI](https://github.com/crrmacarse/adonis-react-ts-boilerplate/workflows/CI/badge.svg?branch=master)
+
 Read the [documentation](https://twitter.com/pablongbuhaymo) to get a full insight about this framework.
 
 ## Overview

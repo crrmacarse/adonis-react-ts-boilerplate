@@ -1,17 +1,17 @@
-'use strict'
+'use strict';
 
 class UserController {
   async login({ auth, request }) {
     const { email, password } = request.all();
     await auth
-    .remember(true)
-    .attempt(email, password);
+      .remember(true)
+      .attempt(email, password);
 
     return 'Logged in succesfully';
   }
 
-  show({ auth, params}) {
-    if(auth.user.id !== Number(params.id)) {
+  show({ auth, params }) {
+    if (auth.user.id !== Number(params.id)) {
       return "You cannot see someone else's profile";
     }
 
@@ -19,4 +19,4 @@ class UserController {
   }
 }
 
-module.exports = UserController
+module.exports = UserController;

@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
 /** @type {import('@adonisjs/framework/src/Env')} */
-const Env = use('Env')
+const Env = use('Env');
 
 module.exports = {
   /*
@@ -25,7 +25,7 @@ module.exports = {
   |
   */
   bcrypt: {
-    rounds: 10
+    rounds: 10,
   },
 
   /*
@@ -44,6 +44,6 @@ module.exports = {
   |
   */
   argon: {
-    type: 1
-  }
-}
+    type: 1,
+  },
+};

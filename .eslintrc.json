@@ -9,7 +9,8 @@
   ],
   "globals": {
       "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly"
+      "SharedArrayBuffer": "readonly",
+      "use": true
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -32,6 +33,9 @@
     }
   },
   "rules": {
+      "strict": "off",
+      "class-methods-use-this": "off",
+      "no-param-reassign": ["error", { "props": false }],
       "no-console": [1, { "allow": ["warn", "error"] }],
       "linebreak-style": 0,
       "import/no-extraneous-dependencies": [2, { "devDependencies": true }],
