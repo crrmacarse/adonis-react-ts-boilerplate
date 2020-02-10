@@ -6,19 +6,25 @@ import ReactDOMServer from 'react-dom/server';
 import { StaticRouter as Router } from 'react-router-dom';
 import { Provider as ReduxProvider } from 'react-redux';
 import store from 'providers/store';
+import Loadable from 'react-loadable';
 import Providers from 'providers';
 
-export default function (url:string, context: any, initialState: any) {
+export default function (url: string, context: any, initialState: any) {
   // Configure the store with the initial state provided
   const initialStore = store(initialState);
+  const modules: string[] = [];
 
   const App = (
-    <Router location={url} context={context}>
-      <ReduxProvider store={initialStore}>
-        <Providers />
-      </ReduxProvider>
-    </Router>
+    <Loadable.Capture report={moduleName => modules.push(moduleName)}>
+      <Router location={url} context={context}>
+        <ReduxProvider store={initialStore}>
+          <Providers />
+        </ReduxProvider>
+      </Router>
+    </Loadable.Capture>
   );
+
+  console.warn(modules);
 
   // render the App store static markup ins content variable
   const content = ReactDOMServer.renderToString(App);

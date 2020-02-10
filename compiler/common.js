@@ -5,7 +5,7 @@ export const entry = join(process.cwd(), '/resources/react/index.tsx');
 
 export const output = {
   path: join(process.cwd(), '/public/dist'),
-  filename: 'bundle.js',
+  filename: '[name].bundle.js',
   chunkFilename: '[name].[hash].bundle.js',
   publicPath: '/dist/',
 };

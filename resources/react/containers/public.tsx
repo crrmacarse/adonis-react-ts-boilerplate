@@ -2,9 +2,11 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import * as ROUTES from 'constants/routes';
 import NotFound from 'routes/not-found';
-import Home from 'components/public/home';
-import SSRExample from 'components/public/ssr';
-import Login from 'forms/login';
+import Loadable from 'hoc/loader';
+
+const Home = Loadable({ loader: () => import('components/public/home') });
+const Login = Loadable({ loader: () => import('forms/login') });
+const SSRExample = Loadable({ loader: () => import('components/public/ssr') });
 
 export default () => (
   <Switch>

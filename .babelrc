@@ -11,5 +11,8 @@
           }
       ],
       "@babel/preset-react",
+  ],
+  "plugins": [
+    "react-loadable/babel"
   ]
 }
