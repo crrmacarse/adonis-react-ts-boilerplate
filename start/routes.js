@@ -17,7 +17,7 @@ const Route = use('Route');
 Route.group(() => {
   // This will be the api routes
 
-  Route.post('login', 'UserController.login').middleware('guest');
+  Route.post('/login', 'AuthController.login');
 }).prefix('api');
 
 Route.get('/adonis', ({ view }) => view.render('welcome'));
