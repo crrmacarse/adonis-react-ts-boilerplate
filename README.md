@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/crrmacarse/adonis-react-ts-boilerplate/workflows/CI/badge.svg?branch=master)
 
-Read the [documentation](https://twitter.com/pablongbuhaymo) to get a full insight about this framework.
+Read the [AdonisJS documentation](https://twitter.com/pablongbuhaymo) to get a full insight about this framework.
 
 ## Overview
 
@@ -16,6 +16,7 @@ This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
 - Edge template engine
 - Lucid ORM
 - Migrations and seeds
+- Testing
 
 It also includes a pre-configured Webpack that caters specifically for React-TS
 
@@ -42,7 +43,15 @@ npm run dev -- --w
 adonis serve --dev -i resources,compiler,public
 ```
 
+Note: Make sure your .env is identical with the .env.example
+
 Optional
+
+Run the SSR:
+
+```bash
+npm run ssr
+```
 
 Run frontend test watch:
 
@@ -97,6 +106,7 @@ npm run analyze
 
 ```bash
 npm run prod
+npm run ssr
 ```
 
 Test the production:
