@@ -5,7 +5,7 @@
   "description": "The fullstack application boilerplate for Adonisjs",
   "main": "index.js",
   "scripts": {
-    "hot": "webpack-dev-server --hot --profile --progress --colors --config=webpack.config.babel.js --env=hot",
+    "hot": "webpack-dev-server --hot --open --profile --progress --colors --config=webpack.config.babel.js --env=hot",
     "dev": "webpack --hot --profile --progress --config=webpack.config.babel.js --env=development",
     "prod": "webpack --profile --progress --config=webpack.config.babel.js --env=production",
     "build:stats": "webpack --profile --json --config=webpack.config.babel.js --env=production > compilation-stats.json",

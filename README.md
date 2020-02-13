@@ -29,8 +29,16 @@ adonis key:generate
 
 ### Starting the application
 
+Frontend only:
+
 ```bash
 npm run hot
+```
+
+Full:
+
+```bash
+npm run dev -- --w
 adonis serve --dev -i resources,compiler,public
 ```
 
@@ -42,10 +50,18 @@ Run frontend test watch:
 npm run test-frontend:watch
 ```
 
+Tip: Append `-- --w` on the following webpack commands on top to get the watch version
+
 ### Migrations
 
 ```bash
 adonis migration:run
+```
+
+### Seeding
+
+```bash
+adonis seed --files DatabaseSeeder.js
 ```
 
 ### Testing the application
@@ -81,6 +97,12 @@ npm run analyze
 
 ```bash
 npm run prod
+```
+
+Test the production:
+
+```bash
+npm run serve-frontend
 ```
 
 ---
