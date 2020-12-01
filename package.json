@@ -38,7 +38,7 @@
     "@adonisjs/shield": "^1.0.8",
     "@adonisjs/vow": "^1.0.17",
     "@types/enzyme": "^3.10.5",
-    "@types/jest": "^25.1.2",
+    "@types/jest": "^25.2.3",
     "@types/node": "^13.7.0",
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
